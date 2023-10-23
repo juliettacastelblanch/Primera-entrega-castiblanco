@@ -1,13 +1,14 @@
-import React from 'react'
-import * as bootstrap from 'bootstrap';
+const CarWidget = () => {
+  return (
+    <div className="car-widget">
+      <div className="car-widget">
+        <span role="img" aria-label="Carrito de compras">
+          🛒
+        </span>
+        <span className="badge badge-pill badge-primary">3</span>
+      </div>
+    </div>
+  );
+};
 
-
-const Cartwidget = () => {
-    return (
-        <div>
-             <i className="bi bi-cart-fill"><span className="badge text-bg-secondary">4</span></i>
-        </div>
-    );
-}
-
-export default Cartwidget;
+export default CarWidget;
