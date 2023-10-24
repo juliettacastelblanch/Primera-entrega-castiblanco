@@ -1,36 +1,68 @@
 import { NavLink } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import CarWidget from '../Cartwidget/Cartwidget';
+import Logo from "../Imagenes/Logo.jpeg";
 
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="container">
-        <a className="navbar-brand" href="/">CASTELLBLANCH</a>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ml-auto">
-           
-            <li className="nav-item">
-              <NavLink to="/">Inicio</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/contacto ">contacto</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink  to="/destacados">Destacados</NavLink>
-            </li>
-            <li className="nav-item">
-           
-              <CarWidget />
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <>
+      
+        <nav
+          className="navbar navbar-expand-lg navbar-light bg-primary"
+          style={{ color: "white" }}
+        >
+          <div className="container-fluid">
+            <NavLink to="/home">
+              <img src={Logo} height="100" alt="no encontrada" />
+            </NavLink>
+
+            <h1>CASTELLBLANCH</h1>
+
+            <button
+              type="button"
+              className="navbar-toggler"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarCollapse"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+
+            <div className="collapse navbar-collapse" id="navbarCollapse">
+              <div className="navbar-nav ms-auto">
+                <h4>
+                  <NavLink
+                    to="/Inicio"
+                    className="nav-item nav-link"
+                    style={{ color: "white" }}
+                  >
+                    Inicio
+                  </NavLink>
+                </h4>
+                <h4>
+                  <NavLink
+                    to="/Contacto"
+                    className="nav-item nav-link"
+                    style={{ color: "white" }}
+                  >
+                    Contacto
+                  </NavLink>
+                </h4>
+                <h4>
+                  <NavLink
+                    to="/Destacados"
+                    className="nav-item nav-link"
+                    style={{ color: "white" }}
+                  >
+                    Destacados
+                  </NavLink>
+                </h4>
+              </div>
+            </div>
+          </div>
+          <CarWidget />
+        </nav>
+    
+    </>
   );
 }
 

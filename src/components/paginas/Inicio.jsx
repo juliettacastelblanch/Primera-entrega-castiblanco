@@ -6,7 +6,6 @@ const Inicio = () => {
     <div>
       <Navbar />
       <ItemListContainer />
-      
     </div>
   );
 };

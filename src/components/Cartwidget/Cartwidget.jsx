@@ -1,4 +1,4 @@
-const CarWidget = () => {
+const Cartwidget = () => {
   return (
     <div className="car-widget">
       <div className="car-widget">
@@ -11,4 +11,4 @@ const CarWidget = () => {
   );
 };
 
-export default CarWidget;
+export default Cartwidget;

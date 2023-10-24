@@ -14,16 +14,20 @@ const ItemDetailContainer = () => {
       .then((json) => {
         setProducto(json);
         console.log(json);
+        
       });
   }, [id]);
 
   return (
     <div>
       <Navbar />
-      <Card style={{ width: "18rem" }}>
+      <Card style={{ width: "15rem" }}>
         <Card.Img variant="top" src={producto?.image} />
+
         <Card.Body>
           <Card.Title>{producto?.title}</Card.Title>
+          <Card.Title>{producto?.description}</Card.Title>
+          <Card.Title>{producto?.price}</Card.Title>
         </Card.Body>
       </Card>
     </div>
