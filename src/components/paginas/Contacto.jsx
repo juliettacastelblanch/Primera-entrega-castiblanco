@@ -1,9 +1,8 @@
-import Navbar from "../Navbar/Navbar";
 
 const Contacto = () => {
   return (
     <div>
-      <Navbar />
+     
       <section className="slide-in-fwd-center">
         
         <div className="container  mt-5 mb-5 ">

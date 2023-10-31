@@ -1,21 +1,26 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, } from "react";
 import Item from "../Item/Item";
-
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import {useParams } from "react-router-dom"
 
 const ItemListContainer = () => {
-  const [productos, setProductos] = useState();
-
+ const [productos, setProductos] = useState();
+ 
+  const { nombreCategoria } = useParams()
+  
   useEffect(() => {
+   
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
       .then((json) => {
         setProductos(json);
         console.log(json);
-      });
-  }, []);
+      })
+      
+  }, [nombreCategoria]);
+  
 
   return (
     <Container>

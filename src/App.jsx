@@ -1,26 +1,25 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import Inicio from "./components/paginas/Inicio";
-import Contacto from "./components/paginas/Contacto";
-import Destacados from "./components/paginas/Destacados";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import Footer from "./components/footer/footer";
-
+import Navbar from "./components/Navbar/Navbar";
 
 
 function App() {
   return (
     <BrowserRouter>
-     
+      <Navbar/>
       <Routes>
-        <Route exact path="/" element={<Inicio />} />
-       <Route exact path="/item/:id" element={<ItemDetailContainer />} />
-        <Route exact path="/contacto" element={<Contacto />} />
-        <Route exact path="/destacados" element={<Destacados />} />
+        <Route exact path="/" element={<ItemListContainer />} />
+        <Route
+          exact
+          path="/category/:nombreCategoria"
+          element={<ItemListContainer />}
+        />
+        <Route exact path="/item/:id" element={<ItemDetailContainer />} />
       </Routes>
-        <Footer/>
+      <Footer />
     </BrowserRouter>
-   
   );
 }
 

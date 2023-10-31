@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import Navbar from "../Navbar/Navbar";
 import Card from "react-bootstrap/Card";
 
 const ItemDetailContainer = () => {
@@ -20,7 +19,7 @@ const ItemDetailContainer = () => {
 
   return (
     <div>
-      <Navbar />
+     
       <Card style={{ width: "15rem" }}>
         <Card.Img variant="top" src={producto?.image} />
 
